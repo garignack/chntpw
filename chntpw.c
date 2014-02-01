@@ -737,7 +737,7 @@ char *change_pw(char *buf, int rid, int vlen, int stat)
 
    } /* new password */
 
-   else if (pl == 1 && *newp == '1') {
+   else if (*newp == '1') {
      /* Setting hash lengths to zero seems to make NT think it is blank
       * However, since we cant cut the previous hash bytes out of the V value
       * due to missing resize-support of values, it may leak about 40 bytes
